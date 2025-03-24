@@ -1,10 +1,11 @@
+
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[rgba(254,185,185,0.40)] pt-[50px] pb-[30px] px-[120px] max-md:px-5 max-md:py-10 max-sm:px-[15px] max-sm:py-[30px]">
-      <div className="flex justify-between mb-10 max-sm:flex-col max-sm:gap-[30px]">
-        <div>
+    <footer className="bg-[#FEEAEA] pt-12 pb-8 px-[120px] max-md:px-5 max-md:py-10 max-sm:px-[15px] max-sm:py-[30px]">
+      <div className="flex justify-between mb-12 max-sm:flex-col max-sm:gap-[30px]">
+        <div className="max-w-sm">
           <Link to="/">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/16c7e68255b2d7aec7bb07d2d0fb6bb7c7fbdb5d"
@@ -12,21 +13,20 @@ export const Footer = () => {
               className="w-[102px] h-11 mb-5"
             />
           </Link>
-          <p className="text-lg max-w-[420px] mb-[30px]">
-            The First Comprehensive Mineral Title Review Platform for Title
-            Attorneys
+          <p className="text-lg mb-8">
+            The First Comprehensive Mineral Title Review Platform for Title Attorneys
           </p>
-          <button className="text-white text-lg w-[344px] bg-[#5C2E2E] px-[30px] py-[13px] rounded-[5px] border-[none] max-sm:w-full">
+          <button className="text-white text-lg bg-[#5C2E2E] px-6 py-3 rounded-md hover:bg-[#4a2424] transition-colors w-full max-w-md">
             Join the Early Access Program
           </button>
         </div>
 
-        <div>
+        <div className="mr-8">
           <h3 className="text-[#5C2E2E] text-lg font-bold mb-5">Explore</h3>
-          <nav className="flex flex-col gap-[17px]">
+          <nav className="flex flex-col gap-4">
             <Link
               to="/what-we-do"
-              className="flex items-center gap-2.5 text-base font-bold"
+              className="flex items-center gap-2 text-base font-medium hover:text-[#5C2E2E] transition-colors"
             >
               <svg
                 width="18"
@@ -47,7 +47,7 @@ export const Footer = () => {
             </Link>
             <Link
               to="/join-program"
-              className="flex items-center gap-2.5 text-base font-bold"
+              className="flex items-center gap-2 text-base font-medium hover:text-[#5C2E2E] transition-colors"
             >
               <svg
                 width="18"
@@ -68,7 +68,7 @@ export const Footer = () => {
             </Link>
             <Link
               to="/contact"
-              className="flex items-center gap-2.5 text-base font-bold"
+              className="flex items-center gap-2 text-base font-medium hover:text-[#5C2E2E] transition-colors"
             >
               <svg
                 width="18"
@@ -95,28 +95,29 @@ export const Footer = () => {
             Any Questions?
           </h3>
           <p className="text-sm mb-5">You can contact us directly via</p>
-          <div className="flex items-center border px-5 py-2.5 rounded-[5px] border-solid border-[rgba(32,33,36,0.4)]">
+          <div className="flex items-center border border-gray-300 rounded-md overflow-hidden">
             <input
               type="email"
               placeholder="Enter Mail Here"
-              className="text-sm text-[rgba(32,33,36,0.5)] w-[200px] border-[none]"
+              className="py-2 px-4 flex-1 border-none outline-none text-sm"
             />
-            <span className="text-4xl text-[#5C2E2E]">→</span>
+            <button className="bg-transparent border-none px-2 text-[#5C2E2E] text-2xl">
+              →
+            </button>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-center pt-[30px] border-t-[#202124] border-t border-solid max-sm:flex-col max-sm:gap-5 max-sm:text-center">
-        <p className="text-sm text-[rgba(32,33,36,0.5)]">
+      <div className="border-t border-gray-300 pt-6 flex justify-between items-center max-sm:flex-col max-sm:gap-5 max-sm:text-center">
+        <p className="text-sm text-gray-500">
           © [2025] TitleMine. All rights reserved. Unauthorized use or
           reproduction of content is strictly prohibited.
         </p>
-        <div className="flex gap-5">
-          {/* Social Icons */}
-          <a href="#" aria-label="Facebook">
+        <div className="flex gap-4">
+          <a href="#" className="p-2 bg-[#5C2E2E] rounded-full" aria-label="Facebook">
             <svg
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -128,10 +129,10 @@ export const Footer = () => {
               />
             </svg>
           </a>
-          <a href="#" aria-label="Instagram">
+          <a href="#" className="p-2 bg-[#5C2E2E] rounded-full" aria-label="Instagram">
             <svg
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -143,10 +144,10 @@ export const Footer = () => {
               />
             </svg>
           </a>
-          <a href="#" aria-label="Twitter">
+          <a href="#" className="p-2 bg-[#5C2E2E] rounded-full" aria-label="Twitter">
             <svg
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -158,10 +159,10 @@ export const Footer = () => {
               />
             </svg>
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="#" className="p-2 bg-[#5C2E2E] rounded-full" aria-label="LinkedIn">
             <svg
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

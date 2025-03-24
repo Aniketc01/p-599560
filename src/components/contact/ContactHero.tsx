@@ -1,10 +1,15 @@
+
 export const ContactHero = () => {
   return (
     <section
-      className="text-[42px] max-w-[372px] bg-cover text-white px-[120px] py-[55px] max-md:px-5 max-md:py-10 max-sm:text-[32px]"
+      className="bg-[url('/lovable-uploads/dc9e46a6-d6f3-47c1-8b69-5658f78ab013.png')] bg-cover bg-center relative text-white px-[120px] py-[55px] max-md:px-5 max-md:py-10 max-sm:text-[32px]"
       role="banner"
     >
-      Contact Us For Any Kind Of Help
+      <div className="max-w-[372px]">
+        <h1 className="text-[42px] font-medium leading-tight">
+          Contact Us For Any Kind Of Help
+        </h1>
+      </div>
     </section>
   );
 };

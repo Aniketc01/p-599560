@@ -1,12 +1,10 @@
+
 export const ContactInfo = () => {
   return (
     <div className="flex-1">
       <h2 className="text-[#5C2E2E] text-2xl font-semibold mb-5">Contact Us</h2>
       <p className="text-base leading-[25px] mb-10">
-        Have questions about land ownership, mining history, or past winners?
-        We're here to help! Reach out to us for any inquiries related to land
-        records, mining details, and more. Our team is ready to assist you with
-        accurate and up-to-date information.
+        Have questions about land ownership, mining history, or past winners? We're here to help! Reach out to us for any inquiries related to land records, mining details, and more. Our team is ready to assist you with accurate and up-to-date information.
       </p>
       <h2 className="text-[#5C2E2E] text-2xl font-semibold mb-5">
         Still Need Help?

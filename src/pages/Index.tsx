@@ -1,3 +1,4 @@
+
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ContactHero } from "@/components/contact/ContactHero";
@@ -6,11 +7,11 @@ import { ContactForm } from "@/components/contact/ContactForm";
 
 const Index = () => {
   return (
-    <div className="max-w-none text-[#202124] mx-auto max-md:max-w-[991px] max-sm:max-w-screen-sm">
+    <div className="min-h-screen flex flex-col text-[#202124]">
       <Header />
-      <main>
+      <main className="flex-1">
         <ContactHero />
-        <section className="flex gap-10 px-[120px] py-10 max-md:flex-col max-md:px-5 max-md:py-[30px] max-sm:px-[15px] max-sm:py-5">
+        <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 px-4 md:px-8 py-16">
           <ContactInfo />
           <ContactForm />
         </section>

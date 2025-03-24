@@ -1,4 +1,8 @@
+
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -32,46 +36,49 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex-1 border shadow-[0_0_15px_rgba(0,0,0,0.06)] bg-white p-[35px] rounded-[5px] border-solid border-[#FEB9B9] max-md:mt-[30px]"
+      className="flex-1 bg-white p-8 rounded-md shadow-md"
     >
-      <div className="flex gap-3 mb-[15px] max-sm:flex-col max-sm:gap-[15px]">
-        <input
+      <div className="grid grid-cols-2 gap-4 mb-4 max-sm:grid-cols-1">
+        <Input
           type="text"
           name="firstName"
           placeholder="First Name*"
           value={formData.firstName}
           onChange={handleChange}
-          className="border border-neutral-200 text-sm w-full px-[21px] py-[15.5px] rounded-[5px] border-solid"
+          className="border border-neutral-200 rounded-md w-full p-3"
           required
         />
-        <input
+        <Input
           type="text"
           name="lastName"
           placeholder="Last Name*"
           value={formData.lastName}
           onChange={handleChange}
-          className="border border-neutral-200 text-sm w-full px-[21px] py-[15.5px] rounded-[5px] border-solid"
+          className="border border-neutral-200 rounded-md w-full p-3"
           required
         />
       </div>
-      <input
+      
+      <Input
         type="email"
         name="email"
         placeholder="Enter Your Email*"
         value={formData.email}
         onChange={handleChange}
-        className="border border-neutral-200 text-sm w-full px-[21px] py-[15.5px] rounded-[5px] border-solid mb-[15px]"
+        className="border border-neutral-200 rounded-md w-full p-3 mb-4"
         required
       />
-      <div className="flex gap-3 mb-[15px] max-sm:flex-col max-sm:gap-[15px]">
-        <div className="flex items-center border border-neutral-200 w-[139px] px-2.5 py-[7px] rounded-[5px] border-solid max-sm:w-full max-sm:mb-[15px]">
-          <span className="select-text text-sm mr-auto">+91 IN</span>
+      
+      <div className="flex gap-4 mb-4 items-center max-sm:flex-col">
+        <div className="flex items-center border border-neutral-200 rounded-md px-3 py-2 max-sm:w-full">
+          <span className="text-sm">+91 IN</span>
           <svg
-            width="25"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 25 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="ml-2"
           >
             <path
               d="M6.18457 9L12.1846 15L18.1846 9"
@@ -82,79 +89,66 @@ export const ContactForm = () => {
             />
           </svg>
         </div>
-        <input
+        <Input
           type="tel"
           name="phone"
           placeholder="Enter Mobile Number*"
           value={formData.phone}
           onChange={handleChange}
-          className="border border-neutral-200 text-sm w-full px-[21px] py-[15.5px] rounded-[5px] border-solid"
+          className="border border-neutral-200 rounded-md w-full p-3 flex-1"
           required
         />
       </div>
-      <div className="flex gap-3 mb-[15px] max-sm:flex-col max-sm:gap-[15px]">
-        <input
+      
+      <div className="grid grid-cols-2 gap-4 mb-4 max-sm:grid-cols-1">
+        <Input
           type="text"
           name="pinCode"
           placeholder="Pin Code"
           value={formData.pinCode}
           onChange={handleChange}
-          className="border border-neutral-200 text-sm w-full px-[21px] py-[15.5px] rounded-[5px] border-solid"
+          className="border border-neutral-200 rounded-md w-full p-3"
         />
-        <input
+        <Input
           type="text"
           name="cityName"
           placeholder="City Name"
           value={formData.cityName}
           onChange={handleChange}
-          className="border border-neutral-200 text-sm w-full px-[21px] py-[15.5px] rounded-[5px] border-solid"
+          className="border border-neutral-200 rounded-md w-full p-3"
         />
       </div>
-      <textarea
+      
+      <Textarea
         name="comments"
         placeholder="Enter Comments"
         value={formData.comments}
         onChange={handleChange}
-        className="w-full h-[251px] border border-neutral-200 text-sm resize-none mb-[25px] px-[21px] py-[11px] rounded-[5px] border-solid"
+        className="border border-neutral-200 rounded-md w-full p-3 mb-6 h-[200px] resize-none"
       />
-      <div className="flex items-center gap-2.5 mb-[25px]">
-        <label className="flex items-center gap-2.5 cursor-pointer">
-          <div className="w-5 h-5 border flex items-center justify-center bg-white rounded-[5px] border-solid border-[#5C2E2E]">
-            <input
-              type="checkbox"
-              name="promotionalOffers"
-              checked={formData.promotionalOffers}
-              onChange={handleChange}
-              className="sr-only"
-            />
-            {formData.promotionalOffers && (
-              <svg
-                width="12"
-                height="10"
-                viewBox="0 0 12 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6014 1.38197C10.7133 1.27353 10.8631 1.21289 11.0189 1.21289C11.1747 1.21289 11.3245 1.27353 11.4364 1.38197C11.491 1.43484 11.5345 1.49816 11.5642 1.56817C11.5939 1.63817 11.6091 1.71343 11.6091 1.78947C11.6091 1.86551 11.5939 1.94077 11.5642 2.01077C11.5345 2.08078 11.491 2.1441 11.4364 2.19697L4.3504 9.11297C4.23847 9.22141 4.08874 9.28205 3.9329 9.28205C3.77706 9.28205 3.62733 9.22141 3.5154 9.11297L0.562399 6.23397C0.507752 6.1811 0.464297 6.11778 0.434619 6.04777C0.404942 5.97777 0.389648 5.90251 0.389648 5.82647C0.389648 5.75043 0.404942 5.67517 0.434619 5.60517C0.464297 5.53516 0.507752 5.47184 0.562399 5.41897C0.674326 5.31053 0.824055 5.24989 0.979899 5.24989C1.13574 5.24989 1.28547 5.31053 1.3974 5.41897L3.9324 7.89397L10.6014 1.38197Z"
-                  fill="#5C2E2E"
-                  stroke="#5C2E2E"
-                  strokeWidth="0.5"
-                />
-              </svg>
-            )}
-          </div>
-          <span className="text-sm">
-            I agree to receive promotional offers from Titlemine
-          </span>
+      
+      <div className="flex items-start gap-2 mb-6">
+        <div className="flex items-center h-5">
+          <input
+            type="checkbox"
+            name="promotionalOffers"
+            id="promotionalOffers"
+            checked={formData.promotionalOffers}
+            onChange={handleChange}
+            className="h-4 w-4 text-[#5C2E2E] border-gray-300 rounded cursor-pointer"
+          />
+        </div>
+        <label htmlFor="promotionalOffers" className="text-sm">
+          I Agree To Receive Promotional Offers From Titlemine
         </label>
       </div>
-      <button
+      
+      <Button
         type="submit"
-        className="w-[298px] h-12 text-white text-base font-medium shadow-[0_4px_14px_rgba(92,46,46,0.25)] bg-[#5C2E2E] mx-auto my-0 rounded-[5px] border-[none] max-sm:w-full"
+        className="w-full bg-[#5C2E2E] hover:bg-[#4a2424] text-white py-3 px-4 rounded-md"
       >
         Submit
-      </button>
+      </Button>
     </form>
   );
 };
